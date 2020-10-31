@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>检测结果</title>
+<meta http-equiv="content-type" content="text/html;charset=gb2312">
+<!--把下面代码加到<head>与</head>之间-->
+<style type="text/css">
+.image{
+padding:5px;
+border:1px solid #000;
+-moz-box-shadow:3px 3px 4px #000;
+-webkit-box-shadow:3px 3px 4px #000;
+box-shadow:3px 3px 4px #000000;
+background: rgb(1, 24, 108);
+filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4,Direction=135,Color='#000000');
+}
+</style>
+</head>
+<body>
+<!--把下面代码加到<body>与</body>之间-->
+<img src="/static/uploads/img/{{imgname}}" class="image">
+
+    {% for str in doc['predictions'] %}
+    <p>{{str}}</p>
+    {% endfor %}
+</body>
+</html>
